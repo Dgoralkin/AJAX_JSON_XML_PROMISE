@@ -1,7 +1,7 @@
 // JavaScript For index
 
 // Version 1: Read from txt.json / text1.txt LOCALLY.
-/*
+
 function myFunction() {
     // Set P2 Where to paste
     var P2 = document.getElementById("P2");
@@ -40,46 +40,35 @@ function myFunction() {
     }
     // Open File to read from
     xhttp.open("GET", "txt.json");
-    //xhttp.open("GET", "text1.txt");
+    
+    // OR CHANGE TO =>
+    // => xhttp.open("GET", "text1.txt");
+
     // Send request to server
     xhttp.send();
+    myFunction2()
   }
-*/
+
+
 
 // Version 2: Read from XML LOCALLY.
 
-function myFunction() {
-    var P2 = document.getElementById("P2");
+function myFunction2() {
+    var P3 = document.getElementById("P3");
 
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-        var txt = JSON.parse(this.responseText);
-        console.log(txt);
+        var cd = this.responseXML;
+        console.log(cd);
+    
+        var x = cd.getElementsByTagName("TITLE");
+        let txt = "";
+        for (let i = 0; i < x.length; i++) {
+          txt = txt + x[i].childNodes[0].nodeValue + "<br>";
+        }
+        P3.innerHTML = txt;
     }
     xhttp.open("GET", "xml_catalog.xml");
     xhttp.send();
   }
 
-
-
-
-
-
-
-
-/*
-function responseXML() {
-    var resp = new XMLHttpRequest();
-    resp.onload = function() {
-        const xmlDoc = this.responseXML;
-        const x = xmlDoc.getElementsByTagName("ARTIST");
-        let txt = "";
-        for (let i = 0; i < x.length; i++) {
-          txt = txt + x[i].childNodes[0].nodeValue + "<br>";
-        }
-        document.getElementById("demo4").innerHTML = txt;
-    }
-    resp.open("GET", "https://github.com/Dgoralkin/AjaxJason-cats/blob/second/templates/xml_catalog.xml");
-    resp.send();
-}
-*/
