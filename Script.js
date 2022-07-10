@@ -1,10 +1,11 @@
 // JavaScript For index
 
+
 var div2 = document.getElementById("P2");
-//const url = 'txt.json';
+const urli = 'txt.json';
 
 function myFunction() {
-  var res = fetch('txt.json').json()
+  fetch(urli)
     .then(res => res.json())
     .then(data => {
         console.log(data);  
@@ -13,6 +14,11 @@ function myFunction() {
         console.error(error)
     })
 }
+
+
+
+
+
 
 
 /*
