@@ -1,6 +1,6 @@
 [
   {
-    "name": "Meowsy",
+    "name": "Dany",
     "species" : "cat",
     "foods": {
       "likes": ["tuna", "catnip"],
@@ -8,7 +8,7 @@
     }
   },
   {
-    "name": "Barky",
+    "name": "Martin",
     "species" : "dog",
     "foods": {
       "likes": ["bones", "carrots"],
@@ -16,7 +16,7 @@
     }
   },
   {
-    "name": "Purrpaws",
+    "name": "Marina",
     "species" : "cat",
     "foods": {
       "likes": ["mice"],
