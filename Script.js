@@ -1,12 +1,16 @@
 // JavaScript For index
 
-const btn = document.getElementById("B1");
+// Version 1: Read from txt.json / text1.txt LOCALLY.
 
 function myFunction() {
+    // Set P2 Where to paste
     var P2 = document.getElementById("P2");
+    // Set XMLHttpRequest
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
+        // Convert To txt VIA JSON.parse()
         var txt = JSON.parse(this.responseText);
+        // Insert into string bank
         var data = ""
         for (i in txt){
             data += txt[i].name + " is a " + txt[i].species + " that likes ";
@@ -34,7 +38,9 @@ function myFunction() {
             P2.innerHTML = data;
         }
     }
+    // Open File to read from
     xhttp.open("GET", "txt.json");
+    // Send request to server
     xhttp.send();
   }
 
