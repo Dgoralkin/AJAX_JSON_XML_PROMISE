@@ -1,10 +1,10 @@
 // JavaScript For index
 
 var div2 = document.getElementById("P2");
-const url = 'txt.json';
+//const url = 'txt.json';
 
 function myFunction() {
-  var res = fetch(url).json()
+  var res = fetch('txt.json').json()
     .then(res => res.json())
     .then(data => {
         console.log(data);  
