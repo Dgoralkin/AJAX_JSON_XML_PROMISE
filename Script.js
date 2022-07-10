@@ -12,9 +12,6 @@ function myFunction() {
 
 
 
-git status
-
-
 /*
 function responseXML() {
     var resp = new XMLHttpRequest();
