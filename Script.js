@@ -2,17 +2,11 @@
 
 
 var div2 = document.getElementById("P2");
-const urli = 'txt.json';
+const url = 'txt.json';
 
 function myFunction() {
-  fetch(urli)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);  
-    })
-    .catch((error) => {
-        console.error(error)
-    })
+    var res = fetch(url).json()
+    console.log(res);
 }
 
 
