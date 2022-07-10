@@ -22,5 +22,13 @@
       "likes": ["mice"],
       "dislikes": ["cookies"]
     }
+  },
+  {
+    "name": "Dany",
+    "species" : "Human",
+    "foods": {
+      "likes": ["Jinka", "Martin", "Romi", "Mia"],
+      "dislikes": ["Gbikes"]
+    }
   }
 ]
