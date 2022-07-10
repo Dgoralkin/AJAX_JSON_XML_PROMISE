@@ -5,7 +5,7 @@ var div2 = document.getElementById("P2");
 const url = 'txt.json';
 
 function myFunction() {
-    var res = fetch(url).json();
+    var res = fetch(url).json()
     console.log(res);
 }
 
