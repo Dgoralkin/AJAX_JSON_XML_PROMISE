@@ -1,7 +1,7 @@
 // JavaScript For index
 
 // Version 1: Read from txt.json / text1.txt LOCALLY.
-
+/*
 function myFunction() {
     // Set P2 Where to paste
     var P2 = document.getElementById("P2");
@@ -40,10 +40,25 @@ function myFunction() {
     }
     // Open File to read from
     xhttp.open("GET", "txt.json");
+    //xhttp.open("GET", "text1.txt");
     // Send request to server
     xhttp.send();
   }
+*/
 
+// Version 2: Read from XML LOCALLY.
+
+function myFunction() {
+    var P2 = document.getElementById("P2");
+
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        var txt = JSON.parse(this.responseText);
+        console.log(txt);
+    }
+    xhttp.open("GET", "xml_catalog.xml");
+    xhttp.send();
+  }
 
 
 
