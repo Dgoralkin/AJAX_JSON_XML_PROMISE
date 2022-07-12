@@ -30,5 +30,57 @@
         <p id="P3">XML</p>
     </div>
 
+    <hr>
+    <hr>
+    
+    
+    
+        <div id="DIV1">
+        <h1>Promises and .Then</Index.html></h1>
+    </div>
+    <button id="btn"></button>
+
+    <div>
+        <p>Connection status:</p>
+        <p id="Paragraph2"></p>
+        <hr>
+    </div>
+
+
+    <script>
+        let btn = document.getElementById("btn");
+        let display = document.getElementById("Paragraph2");
+        btn.addEventListener("click", click);
+
+        setTimeout(clickMe, 3000);
+        function clickMe(){
+            btn.innerHTML = "Click Me";
+        }
+        
+
+        function click(){
+            const myPromise = new Promise((passed, failed) => {
+                let connection = true;
+    
+                if (connection){
+                    passed("Passed");
+                } else {
+                    failed("failed")
+                }
+            });
+    
+            myPromise.then((message) => {
+                    display.innerHTML = message;
+            }).catch((message) => {
+                display.innerHTML = message;
+        });
+        }
+
+    </script>
+    
+    
+    
+    
+    
 </body>
 </html>
